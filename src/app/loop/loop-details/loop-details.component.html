@@ -1,0 +1,25 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <!-- Details -->
+    <div class="col-md-3">
+
+    </div>
+    <!-- player -->
+    <div class="col-md-6">
+      <app-player></app-player>
+      <br>
+      <div class="float-end">
+        <button class="btn btn-primary btn-md btn-floating" type="button" (click)="this.visible = true;"
+          (click)="openModal()">
+          <i *ngIf="!visible" class="fas fa-arrow-down"></i>
+          <span *ngIf="visible" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Ads -->
+    <div class="col-md-3">
+      <app-ads></app-ads>
+    </div>
+  </div>
+</div>

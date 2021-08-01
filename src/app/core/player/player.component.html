@@ -1,0 +1,24 @@
+<div class="card" style="background-color: #F5F5F5;">
+    <div class="card-header">
+        <div class="float-start">
+            Artist
+        </div>
+        <div class="float-end">
+            <button type="button" (click)="play()" class="btn btn-light btn-floating"><i *ngIf="playBtnVisible"
+                    style="color: blue;" class="fas fa-play"></i><i *ngIf="!playBtnVisible" style="color: blue;"
+                    class="fas fa-pause"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div id="waveform"></div>
+    </div>
+    <div class="card-footer text-muted">
+        <i style="margin-right: 10px;" class="far fa-heart"></i>
+        <i class="far fa-comment-alt"></i>
+        <div class="float-end">
+            <button class="btn btn-light btn-sm" type="button" [routerLink]="['/loops/download']">
+                Download
+            </button>
+        </div>
+    </div>
+</div>

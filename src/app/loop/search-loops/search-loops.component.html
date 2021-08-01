@@ -1,0 +1,134 @@
+<div class="card shadow-5-strong bg-light">
+  <ul class="list-group">
+    <form [formGroup]="myForm">
+      <div class="card-body" style="color: white;">
+        <!-- Loop Types -->
+        <li style="text-align: center;" class="list-group-item">
+          <div class="btn-group btn-group-sm" role="group">
+            <input mdbRadio type="radio" class="btn-check" name="option" id="option2" autocomplete="off"
+              [checked]="true" />
+            <label class="btn btn-outline-primary text-capitalize" for="option2">Melody Loops</label>
+            <input mdbRadio type="radio" class="btn-check" name="option" id="option3" autocomplete="off" />
+            <label class="btn btn-outline-primary text-capitalize" for="option3">Drum Loops</label>
+          </div>
+        </li>
+        <!-- Bpm -->
+        <li class="list-group-item">
+          <a style="cursor: pointer;" (click)="basicCollapse.toggle()" aria-expanded="false"
+            aria-controls="collapseExample">
+            <h5 class="card-title" style="color: black;">BPM<i class="fas fa-angle-down float-end"></i></h5>
+          </a>
+          <div id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse"
+            style="margin-top: 10px;margin-bottom: 10px;">
+            <mdb-tabs class="text-capitalize" [justified]="true">
+              <mdb-tab title="Range">
+                <div class="input-group">
+                  <mdb-form-control class="w-50">
+                    <input mdbInput type="number" formControlName="minBpm" id="form1"
+                      class="form-control form-control-sm" required />
+                    <label mdbLabel class="form-label" for="form1">Min</label>
+                  </mdb-form-control>
+                  <mdb-form-control class="w-50">
+                    <input mdbInput type="number" id="form1" formControlName="maxBpm"
+                      class="form-control form-control-sm" />
+                    <label mdbLabel class="form-label" for="form1">Max</label>
+                  </mdb-form-control>
+                </div>
+              </mdb-tab>
+              <mdb-tab title="Exact">
+                <mdb-form-control>
+                  <input mdbInput type="number" id="form1" class="form-control form-control-sm" />
+                  <label mdbLabel class="form-label" for="form1">Exact</label>
+                </mdb-form-control>
+              </mdb-tab>
+            </mdb-tabs>
+          </div>
+        </li>
+        <!-- Key -->
+        <li class="list-group-item">
+          <a style="cursor: pointer;" (click)="basicCollapse2.toggle()" aria-expanded="false"
+            aria-controls="collapseExample2">
+            <h5 class="card-title" style="color: black;">Key<i class="fas fa-angle-down float-end"></i></h5>
+          </a>
+          <div id="collapseExample2" mdbCollapse #basicCollapse2="mdbCollapse"
+            style="margin-top: 10px;margin-bottom: 10px;">
+            <div class="input-group">
+              <select class="form-select form-select-sm w-50">
+                <option value="0">All</option>
+                <option value="0">C</option>
+                <option value="0">C#</option>
+                <option value="0">D</option>
+                <option value="0">D#</option>
+                <option value="0">E</option>
+                <option value="0">F</option>
+                <option value="0">F#</option>
+                <option value="0">G</option>
+                <option value="0">G#</option>
+                <option value="0">A</option>
+                <option value="0">A#</option>
+                <option value="0">B</option>
+              </select>
+              <select class="form-select form-select-sm w-50">
+                <option value="0">All</option>
+                <option value="0">Major</option>
+                <option value="0">Minor</option>
+              </select>
+            </div>
+          </div>
+        </li>
+        <!-- Tags -->
+        <li class="list-group-item">
+          <a style="cursor: pointer;" (click)="basicCollapse3.toggle()" aria-expanded="false"
+            aria-controls="collapseExample3">
+            <h5 class="card-title" style="color: black;">Tags<i class="fas fa-angle-down float-end"></i></h5>
+          </a>
+          <div id="collapseExample3" mdbCollapse #basicCollapse3="mdbCollapse"
+            style="margin-top: 10px;margin-bottom: 10px;">
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check2" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check2">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check3" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check3">Tag</label>
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check4" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check4">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check5" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check5">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check6" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check6">Tag</label>
+          </div>
+        </li>
+        <!-- Genres -->
+        <li class="list-group-item">
+          <a style="cursor: pointer;" (click)="basicCollapse4.toggle()" aria-expanded="false"
+            aria-controls="collapseExample4">
+            <h5 class="card-title" style="color: black;">Genres<i class="fas fa-angle-down float-end"></i></h5>
+          </a>
+          <div id="collapseExample4" mdbCollapse #basicCollapse4="mdbCollapse"
+            style="margin-top: 10px;margin-bottom: 10px;">
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check2" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check2">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check3" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check3">Tag</label>
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check4" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check4">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check5" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check5">Tag</label>
+
+            <input mdbCheckbox type="checkbox" class="btn-check" id="btn-check6" autocomplete="off" />
+            <label class="btn btn-light btn-sm" for="btn-check6">Tag</label>
+          </div>
+        </li>
+      </div>
+    </form>
+  </ul>
+</div>

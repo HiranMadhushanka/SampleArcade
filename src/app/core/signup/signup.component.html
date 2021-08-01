@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+</div>
+<div class="modal-body">
+  <label mdbLabel class="form-label" for="form1">UserName</label>
+  <mdb-form-control>
+    <input mdbInput type="text" id="form1" class="form-control" />
+  </mdb-form-control>
+  <label mdbLabel class="form-label" for="form1">Email Address</label>
+  <mdb-form-control style="margin: 10px;">
+    <input mdbInput type="text" id="form1" class="form-control" />
+  </mdb-form-control>
+  <label mdbLabel class="form-label" for="form1">Country</label>
+  <mdb-form-control style="margin: 10px;">
+    <select class="form-select form-control" style="margin-top: 10px;">
+      <option value="0">SriLanka</option>
+      <option value="0">C</option>
+    </select>
+  </mdb-form-control>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
+    Close
+  </button>
+  <button type="button" class="btn btn-primary">SignUp</button>
+</div>
