@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <button class="btn btn-primary btn-sm" type="button" (click)="basicCollapse.toggle()" aria-expanded="false"
+    aria-controls="collapseExample">
+    Filter <i class="fas fa-filter"></i>
+  </button>
+  <br>
+  <div class="row">
+     <!-- Filter -->
+    <div class="col-md-3">
+      <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+        <app-search-loops></app-search-loops>
+      </div>
+    </div>
+    <br>
+     <!-- Content -->
+    <div class="col-md-6">
+      <app-content></app-content>
+    </div>
+    <br>
+     <!-- Ads -->
+    <div class="col-md-3">
+      <app-ads></app-ads>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+ <!-- Details -->
+<div class="container-fluid">
+    <button class="btn btn-primary btn-md" type="button" (click)="openModal()">
+        <i class="fas fa-plus" style="margin-right: 10px;"></i>Add new Forum
+    </button>
+    <br><br>
+    <div class="card shadow-5-center">
+        <div class="card-header">Title</div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+                With supporting text below as a natural lead-in to additional content.
+            </p>
+
+        </div>
+        <div class="card-footer text-muted">
+            <i style="margin-right: 10px;" class="far fa-heart"></i>
+            <i class="far fa-comment-alt"></i>
+            <div class="float-end">
+                <button class="btn btn-light btn-sm" type="button" (click)="basicCollapse.toggle()"
+                aria-expanded="false"
+                aria-controls="collapseExample">
+                    View Comments
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+    </div>
+
+</div>

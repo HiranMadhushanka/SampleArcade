@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #F5F5F5;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sample Arcade</a>
+    <button class="navbar-toggler" type="button" (click)="basicNav.toggle()" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" mdbCollapse #basicNav="mdbCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loops">Loops</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog">Blog</a>
+        </li>
+      </ul>
+      <!-- Search form -->
+      <form class="d-flex input-group w-auto">
+        <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+        <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
+          Search
+        </button>
+      </form>
+      <div class="float-end">
+        <i class="far fa-bell"></i>
+      </div>
+    </div>
+  </div>
+</nav>
