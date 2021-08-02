@@ -1,27 +1,78 @@
-<div class="modal-header">
-  <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
-  <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
-</div>
-<div class="modal-body">
-  <label mdbLabel class="form-label" for="form1">UserName</label>
-  <mdb-form-control>
-    <input mdbInput type="text" id="form1" class="form-control" />
-  </mdb-form-control>
-  <label mdbLabel class="form-label" for="form1">Email Address</label>
-  <mdb-form-control style="margin: 10px;">
-    <input mdbInput type="text" id="form1" class="form-control" />
-  </mdb-form-control>
-  <label mdbLabel class="form-label" for="form1">Country</label>
-  <mdb-form-control style="margin: 10px;">
-    <select class="form-select form-control" style="margin-top: 10px;">
-      <option value="0">SriLanka</option>
-      <option value="0">C</option>
-    </select>
-  </mdb-form-control>
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
-    Close
-  </button>
-  <button type="button" class="btn btn-primary">SignUp</button>
-</div>
+<form [formGroup]="validationForm">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+  </div>
+  <div class="modal-body" style="margin-bottom: 10px;">
+
+    <label mdbLabel class="form-label" for="form1">User Name</label>
+    <mdb-form-control>
+      <input mdbInput type="text" id="form1" class="form-control" formControlName="userName" required />
+      <mdb-error *ngIf="
+            userName?.invalid && (userName?.dirty || userName?.touched)
+            ">User name is required</mdb-error>
+      <mdb-success *ngIf="
+          userName?.valid && (userName?.dirty || userName?.touched)
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <div>&nbsp;</div>
+
+    <label mdbLabel class="form-label" for="form2">Email Address</label>
+    <mdb-form-control>
+      <input mdbInput type="text" id="form2" class="form-control" formControlName="Email" required />
+      <mdb-error *ngIf="Email?.invalid && (Email?.dirty || Email?.touched)">Email Address is required
+      </mdb-error>
+      <mdb-success *ngIf="Email?.valid && (Email?.dirty || Email?.touched)">Looks good!</mdb-success>
+    </mdb-form-control>
+    <div>&nbsp;</div>
+    <label mdbLabel class="form-label" for="form1">Country</label>
+    <mdb-form-control>
+      <select mdbInput type="select" id="form1" class="form-select" formControlName="country" required>
+        <option value="1">Us</option>
+        <option value="2">SL</option>
+      </select>
+      <mdb-error *ngIf="
+      country?.invalid && (country?.dirty || country?.touched)
+            ">Country is required</mdb-error>
+      <mdb-success *ngIf="
+      country?.valid && (country?.dirty || country?.touched)
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <div>&nbsp;</div>
+    <label mdbLabel class="form-label" for="form1">City</label>
+    <mdb-form-control>
+      <select mdbInput type="select" id="form1" class="form-select" formControlName="city" required>
+        <option value="1">A</option>
+        <option value="2">B</option>
+      </select>
+      <mdb-error *ngIf="
+      city?.invalid && (city?.dirty || city?.touched)
+            ">City is required</mdb-error>
+      <mdb-success *ngIf="
+      city?.valid && (city?.dirty || city?.touched)
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <div>&nbsp;</div>
+    <div class="row">
+      <div class="form-check">
+        <input mdbCheckbox class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+
+        <label class="form-check-label" for="flexCheckDefault">
+          Agree to
+        </label>
+      </div>
+      <a style="cursor: pointer;color: blue;" type="hyperlink" (click)="basicCollapse2.toggle()" aria-expanded="false"
+        aria-controls="collapseExample2">Term & conditions</a>
+    </div>
+
+    <div class="card" id="collapseExample2" mdbCollapse #basicCollapse2="mdbCollapse">text</div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef.close()">
+      Close
+    </button>
+    <button type="submit" class="btn btn-primary">SignUp</button>
+  </div>
+</form>
