@@ -18,6 +18,8 @@ export class SignupComponent implements OnInit {
     this.validationForm = new FormGroup({
       userName: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       Email: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      password: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+      cPassword: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       country: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       city: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
     });
@@ -29,6 +31,14 @@ export class SignupComponent implements OnInit {
 
   get Email(): AbstractControl {
     return this.validationForm.get('Email');
+  }
+
+  get password(): AbstractControl {
+    return this.validationForm.get('password');
+  }
+
+  get cPassword(): AbstractControl {
+    return this.validationForm.get('cPassword');
   }
 
   get country(): AbstractControl {
