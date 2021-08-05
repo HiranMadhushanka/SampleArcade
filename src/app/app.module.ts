@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
@@ -52,6 +52,7 @@ import { ForumDetailsComponent } from './forum/forum-details/forum-details.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MdbCarouselModule,
     MdbCheckboxModule,
