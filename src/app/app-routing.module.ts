@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'loops', component: LoopsComponent },
   { path: 'loops/download', component: LoopDetailsComponent },
-  { path: 'forum', component: ForumComponent },
+  { path: 'colab', component: ForumComponent },
   { path: 'blog', component: BlogDetailsComponent },
 ];
 

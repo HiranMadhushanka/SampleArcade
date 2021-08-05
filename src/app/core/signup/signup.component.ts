@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { CoreServicesService } from '../../services/core-services.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ export class SignupComponent implements OnInit {
 
   validationForm: FormGroup | any;
 
-  constructor(public modalRef: MdbModalRef<SignupComponent>) { }
+  constructor(public modalRef: MdbModalRef<SignupComponent>,private coreservice:CoreServicesService) { }
 
   ngOnInit(): void {
     this.validationForm = new FormGroup({
@@ -22,6 +23,11 @@ export class SignupComponent implements OnInit {
       cPassword: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       country: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
       city: new FormControl(null, { validators: Validators.required, updateOn: 'blur' }),
+    });
+    console.log("test");
+    this.coreservice.getCountryList().subscribe(res =>{
+      console.log(res);
+      console.log("test");
     });
   }
 
