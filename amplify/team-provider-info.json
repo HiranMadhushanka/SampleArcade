@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wavedrive-dev-114720-authRole",
+      "UnauthRoleArn": "arn:aws:iam::855094264952:role/amplify-wavedrive-dev-114720-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::855094264952:role/amplify-wavedrive-dev-114720-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wavedrive-dev-114720-deployment",
+      "UnauthRoleName": "amplify-wavedrive-dev-114720-unauthRole",
+      "StackName": "amplify-wavedrive-dev-114720",
+      "StackId": "arn:aws:cloudformation:us-east-1:855094264952:stack/amplify-wavedrive-dev-114720/4d13a3b0-f810-11eb-9e93-1231d953c74d",
+      "AmplifyAppId": "d1ny8ngpx1n73d"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top text-light navbar-dark" style="background-color: black;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Sample Arcade</a>
+    <a class="navbar-brand" routerLink="">Sample Arcade</a>
     <button class="navbar-toggler" type="button" (click)="basicNav.toggle()" aria-expanded="false"
       aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
@@ -8,16 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarNav" mdbCollapse #basicNav="mdbCollapse">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loops">Loops</a>
+          <a class="nav-link" routerLink="loops">Loops</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="colab">Colab</a>
+          <a class="nav-link" routerLink="colab">Colab</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="blog">Blog</a>
+          <a class="nav-link" routerLink="blog">Blog</a>
         </li>
       </ul>
       <!-- Search form -->
