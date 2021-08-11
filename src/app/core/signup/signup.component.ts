@@ -13,7 +13,8 @@ export class SignupComponent implements OnInit {
 
   validationForm: FormGroup | any;
 
-  constructor(public modalRef: MdbModalRef<SignupComponent>,private coreservice:CoreServicesService) { }
+  // constructor(public modalRef: MdbModalRef<SignupComponent>,private coreservice:CoreServicesService) { }
+  constructor(private coreservice:CoreServicesService) { }
 
   ngOnInit(): void {
     this.validationForm = new FormGroup({

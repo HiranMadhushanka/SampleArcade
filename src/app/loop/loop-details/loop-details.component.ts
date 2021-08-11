@@ -16,10 +16,10 @@ export class LoopDetailsComponent implements OnInit {
     
   }
 
-  modalRef: MdbModalRef<SignupComponent> | undefined;
+  // modalRef: MdbModalRef<SignupComponent> | undefined;
   
-  openModal() {
-    this.modalRef = this.modalService.open(SignupComponent)
+  signup() {
+    window.location.assign("https://wavedrive-web.auth.us-east-1.amazoncognito.com/login?client_id=1qhka712ot6v41d87b3mke3j42&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://d95b1ojdf9oqb.cloudfront.net/loops/download");
   }
 
 }
